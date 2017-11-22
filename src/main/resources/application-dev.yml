@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  context-path: /complete
+jwt:
+  header: Authorization
+  secret: mySecret
+  expiration: 66096000000
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
+
+cassandra:
+  host: 172.26.246.72:9042
+  cluster:
+    name: test
+    username: cassandra
+    password: cassandra
+  keyspace:
+    name: complete
+
+info:
+  app:
+    version: 1.0.0
+    name: complete Backend For The New platForm 2.0
+    description: complete 2.0, Its a REST webservice and a portal to visualize data and do analysis
+
+
+

@@ -17,6 +17,7 @@ apply plugin: 'org.springframework.boot'
 group = 'edu.apigateway'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
@@ -24,6 +25,10 @@ repositories {
 
 
 dependencies {
+	compile 'org.projectlombok:lombok:1.16.18'
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile group: 'com.datastax.cassandra', name: 'cassandra-driver-core', version: '3.3.0'
+	compile group: 'com.datastax.cassandra', name: 'cassandra-driver-mapping', version: '3.3.0'
+	compile group: 'org.apache.solr', name: 'solr-solrj', version: '6.6.0'
 }
